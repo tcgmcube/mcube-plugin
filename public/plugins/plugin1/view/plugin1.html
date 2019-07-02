@@ -1,0 +1,56 @@
+<div class="row">
+	<div class="col-md-6">
+				<form name="userForm" class="needs-validation" ng-submit="submitForm(userForm.$valid)" novalidate>
+					<div class="form-row">
+					  <div class="col-md-6 mb-3">
+						<label for="validationCustom01">First name</label>
+						<input type="text" class="form-control" id="validationCustom01" placeholder="First name" ng-model="user.firstName" required>
+						<div class="valid-feedback">
+						  Looks good!
+						</div>
+					  </div>
+					  <div class="col-md-6 mb-3">
+						<label for="validationCustom02">Last name</label>
+						<input type="text" class="form-control" id="validationCustom02" placeholder="Last name" ng-model="user.lastName" required>
+						<div class="valid-feedback">
+						  Looks good!
+						</div>
+					  </div>
+					  
+					</div>
+					<div class="form-row">
+					  <div class="col-md-12 mb-3">
+						<label for="validationCustom03">Email</label>
+						<input type="email" class="form-control" id="validationCustom03" placeholder="Example abc@xyz.com" ng-model="user.email" required>
+						<div class="invalid-feedback">
+						  Please provide a valid email.
+						</div>
+					  </div>
+					  
+					</div>
+					<button class="btn btn-primary" ng-disabled="userForm.$invalid"  type="submit">Submit</button>
+				  </form>
+	</div>
+	<div class="col-md-6">
+			<table class="table table-striped">
+					<thead class="thead-dark">
+					  <tr>
+						<th scope="col">#</th>
+						<th scope="col">First Name</th>
+						<th scope="col">Last Name</th>
+						<th scope="col">Email</th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr ng-repeat="user in userList">
+						<td>{{user.userId}}</td>
+						<td>{{user.firstName}}</td>
+						<td>{{user.lastName}}</td>
+						<td>{{user.email}}</td>
+					  </tr>
+					  
+					</tbody>
+				  </table>
+
+	</div>
+</div>

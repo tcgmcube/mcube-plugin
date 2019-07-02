@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html ng-app="mcube/plugin">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>MCube Plugins</title>
+
+	<script src="/build/vendor.bundle.js"></script>
+	<script src="/build/mcube_plugin.bundle.js"></script>
+
+</head>
+
+<body ng-controller="customPageController" class="container-fluid">
+			  <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+				<a class="navbar-brand logo-container mr-0 padzero" href="#home"><div class="logoholder"></div></a><div class="sub-title">plugin</div>
+			  </nav>
+			  
+			  <div class="container-fluid">
+				<div class="row">
+				  <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+					<div class="sidebar-sticky">
+					  <ul class="nav flex-column">
+						<li class="nav-item">
+						  <a class="nav-link" ng-class="getClass('/home')" href="#home">
+							<span data-feather="home"></span>
+							Home <span class="sr-only">(current)</span>
+						  </a>
+						</li>
+						<li class="nav-item">
+								<a class="nav-link" ng-class="getClass('/plugin1')" href="#plugin1">
+								  <span data-feather="home"></span>
+								  Plugin1
+								</a>
+						</li>
+						<li class="nav-item">
+								<a class="nav-link" ng-class="getClass('/plugin2')" href="#plugin2">
+								  <span data-feather="home"></span>
+								  Plugin2
+								</a>
+						</li>
+						<!-- add more links for other plugin pages -->
+						<!-- <li class="nav-item">
+							<a class="nav-link" ng-class="getClass('/<plugin-route>')" href="#<plugin-route>">
+								<span data-feather="home"></span>
+								<Page name>
+							</a>
+					</li> -->
+						
+					</div>
+				  </nav>
+			  
+				  <main role="main" class="col-md-9 mrg-lft col-lg-10 px-4">
+					<div ng-view></div>
+				  </main>
+				  <!-- <div class="col-md-12" ></div> -->
+				</div>
+	
+
+	
+
+</body>
+</html>

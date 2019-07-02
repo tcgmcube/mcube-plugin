@@ -1,0 +1,36 @@
+{
+  "name": "mcube-plugin",
+  "version": "3.0.0",
+  "description": "MCube plugin development",
+  "main": "server/index.js",
+  "author": "Purab Sengupta <purab.sengupta@tcgdigital.com>",
+  "bin": {
+    "mcube-plugin": "./server/index.js"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "body-parser": "~1.5.2",
+    "bootstrap": "^4.3.1",
+    "express": "~4.7.2",
+    "hapi": "14.2.0",
+    "http": "0.0.0",
+    "inert": "4.0.2",
+    "jquery": "2.1.4",
+    "method-override": "~2.1.2",
+    "mysql": "^2.17.1",
+    "popper.js": "^1.15.0",
+    "node-rest-client": "2.0.1",
+    "request": "2.61.0"
+  },
+  "devDependencies": {
+    "angular": "1.4.7",
+    "angular-route": "1.4.7",
+    "css-loader": "^0.17.0",
+    "nodemon": "^1.19.1",
+    "style-loader": "^0.12.3",
+    "webpack": "1.12.15"
+  }
+}
